@@ -1,0 +1,30 @@
+[user]
+	email = andreibelcin17aug@gmail.com
+	name = Andrei Belcin
+[color]
+	ui = auto
+[core]
+	pager = less -FMRiX
+	autocrlf = input
+[push]
+	default = simple
+[alias]
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+	stashpull = pull --rebase --autostash
+	alias = config --get-regexp alias
+	firstpush = push -u origin HEAD
+	amend = commit --amend
+	select = add -p
+	discard = reset --hard HEAD
+	update = commit --amend --no-edit
+	ls = status
+    uncommit = reset --soft HEAD~1
+	quicklog = show --summary
+	mainline = checkout mainline
+	accuse = blame -w -C -C -C
+	wordiff = diff --word-diff
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[maintenance]

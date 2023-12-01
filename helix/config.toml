@@ -13,5 +13,12 @@ display-inlay-hints = true
 [editor.cursor-shape]
 insert = "bar"
 
-[keys.normal]
-C-j = "save_selection"
+[editor.file-picker]
+hidden = false
+
+[keys.normal.g]
+u = "jump_backward"
+
+[keys.normal.space]
+q = ":bc"
+J = "save_selection"
