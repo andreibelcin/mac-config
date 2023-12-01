@@ -1,0 +1,8 @@
+/*
+!.gitignore
+!helix/
+!zellij/
+!alacritty/
+!tmux/
+tmux/plugins/
+!lazygit/

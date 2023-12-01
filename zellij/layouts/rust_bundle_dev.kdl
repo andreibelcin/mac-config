@@ -1,0 +1,26 @@
+layout {
+	tab name="Rust Bundle" cwd="~/Code/ignx-wasm/src/IgnitionXRustBundle" {
+		pane size=1 borderless=true {
+			plugin location="zellij:tab-bar"
+		}
+		pane split_direction="vertical" {
+			pane split_direction="horizontal" {
+				pane name="helix rust bundle" focus=true {
+					command "hx"
+					args "."
+				}
+				pane size="15%" split_direction="vertical" {
+					pane command="./build-tools/release-quick" {
+						args "--lib" "--opt"
+						start_suspended true
+					}
+					pane
+				}
+			}
+			pane size="30%" command="lazygit" 	
+		}
+		pane size=2 borderless=true {
+			plugin location="zellij:status-bar"
+		}
+	}
+}

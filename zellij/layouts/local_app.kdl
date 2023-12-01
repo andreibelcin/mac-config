@@ -1,0 +1,25 @@
+layout {
+	tab name="Local App dashboard" {
+		pane size=1 borderless=true {
+			plugin location="zellij:tab-bar"
+		}
+		pane split_direction="vertical" {
+			pane name="IgnitionX" size="40%" {
+				cwd "~/Code/IgnitionXOnMac/install/bin"
+			}
+			pane {
+				pane name="LRCBundle" size="35%" {
+					cwd "~/Code/ignx-wasm/src/AVLivingRoomClientBundle" 
+					command "brazil-build"
+					args "run" "build" "--" "--watch" "--server" "-p" "3999" "-f" "Ignition-X-XP" "--nobytecode" "--noaot"
+					start_suspended true
+				}
+				pane cwd="~/Code/ignx-wasm/src/AVLivingRoomClientBundle" 
+			}
+		}
+		pane size=2 borderless=true {
+			plugin location="zellij:status-bar"
+		}
+	}
+}
+

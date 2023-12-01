@@ -1,0 +1,17 @@
+theme = "dark_plus"
+
+[editor]
+auto-save = true
+bufferline = "multiple"
+line-number = "relative"
+mouse = false
+undercurl = true
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[keys.normal]
+C-j = "save_selection"
