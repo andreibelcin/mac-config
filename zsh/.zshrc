@@ -132,3 +132,6 @@ alias disable-package-filter='while true; do sudo pfctl -d; sleep 60; done'
 
 export EDITOR="hx"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(zoxide init zsh)"
+
