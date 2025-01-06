@@ -1,4 +1,6 @@
 /*
+!fzf/
+!btop/
 !.gitignore
 !git/
 !gh/
@@ -9,3 +11,4 @@
 !tmux/
 tmux/plugins/
 !lazygit/
+!lf/

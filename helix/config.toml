@@ -22,3 +22,4 @@ u = "jump_backward"
 [keys.normal.space]
 q = ":bc"
 J = "save_selection"
+t = { f = ":toggle file-picker.git-ignore" }

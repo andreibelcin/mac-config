@@ -11,8 +11,8 @@ ZSH_THEME="robbyrussell"
 bindkey "^[B" backward-word
 bindkey "^[F" forward-word
 
-alias z-new-layout-tab='zellij action new-tab --layout'
-alias zfloat='zellij run -f --'
+alias zl='zellij action new-tab --layout'
+alias zrun='zellij run -f --'
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -90,6 +90,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
@@ -126,12 +127,24 @@ alias zsh-config='hx ~/.zshrc'
 alias zsh-update='source ~/.zshrc'
 alias helix-conf='hx ~/.config/helix/config.toml'
 alias helix-conf-lang='hx ~/.config/helix/languages.toml'
-alias vim-config='vim ~/.vimrc'
 
-alias disable-package-filter='while true; do sudo pfctl -d; sleep 60; done'
 
 export EDITOR="hx"
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
+source <(fzf --zsh)
+alias fz='fzf -m --preview="bat --color=always {}"'
+alias fzh='hx $(fz)'
+source $HOME/.config/lf/lfcd
 
+# Python stuff
+
+alias python='python3'
+
+# Created by `pipx` on 2024-12-13 22:55:37
+export PATH="$PATH:/Users/andreibelcin/.local/bin"
+
+autoload -U compinit && compinit
+eval "$(register-python-argcomplete pipx)"
+
+alias uv-activate='source ~/.venv/bin/activate'

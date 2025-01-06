@@ -1,9 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
+    - /Users/andreibelcin/Code/ray-tracing-webgpu
 startuppopupversion: 5
-lastversion: 0.41.0
+lastversion: 0.42.0
 customcommandshistory:
-- q
+    - q
 hidecommandlog: false
 ignorewhitespaceindiffview: false
 diffcontextsize: 3

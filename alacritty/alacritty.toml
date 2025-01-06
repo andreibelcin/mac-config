@@ -1,15 +1,18 @@
 [font]
 size = 12
 
-[[keyboard.bindings]]
-chars = "\u001BF"
-key = "Right"
-mods = "Shift"
-
-[[keyboard.bindings]]
-chars = "\u001BB"
-key = "Left"
-mods = "Shift"
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
 
 [window]
-option_as_alt = "OnlyLeft"
+option_as_alt = "Both"
+opacity = 0.8
+#startup_mode = "SimpleFullscreen"
+
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Command", chars = "\u001BF" },
+  { key = "Left", mods = "Command", chars = "\u001BB" }
+]
+
